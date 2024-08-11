@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>닉네임 계산기</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSS 파일 링크 추가 -->
+</head>
+<body>
+    <h1>★파라오 계산기★</h1>
+    <div class="container">
+        <div class="calculator">
+            <h1>4번방</h1>
+            <input type="file" id="fileInput1" accept=".txt">
+            <input type="date" id="dateInput1">
+            <textarea id="nicknameInput1" rows="5" placeholder="닉네임을 입력하세요 (각 줄마다 하나씩)"></textarea>
+            <button id="searchButton1">확인</button>
+            <button id="downloadButton1" class="hidden">CSV 다운로드</button>
+            
+            <div id="result1" class="result-container hidden">
+                <h2>결과</h2>
+                <table id="resultsTable1">
+                    <thead>
+                        <tr>
+                            <th>닉네임</th>
+                            <th>리딩 포함</th>
+                            <th>리딩 미포함</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsOutput1"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="calculator">
+            <h1>5번방</h1>
+            <input type="file" id="fileInput2" accept=".txt">
+            <input type="date" id="dateInput2">
+            <textarea id="nicknameInput2" rows="5" placeholder="닉네임을 입력하세요 (각 줄마다 하나씩)"></textarea>
+            <button id="searchButton2">확인</button>
+            <button id="downloadButton2" class="hidden">CSV 다운로드</button>
+            
+            <div id="result2" class="result-container hidden">
+                <h2>결과</h2>
+                <table id="resultsTable2">
+                    <thead>
+                        <tr>
+                            <th>닉네임</th>
+                            <th>리딩 포함</th>
+                            <th>리딩 미포함</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsOutput2"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

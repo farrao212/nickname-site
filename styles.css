@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0e6f6, #e0f7fa);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    display: flex; /* Flexbox를 사용하여 옆으로 배치 */
+    justify-content: space-between; /* 공간을 균등하게 분배 */
+    max-width: 1000px; /* 너비 증가 */
+    margin: 40px auto; /* 상하 여백 추가 */
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* 그림자 강화 */
+}
+
+.calculator {
+    border: 1px solid #ccc; /* 테두리 추가 */
+    padding: 20px; /* 패딩 추가 */
+    width: 45%; /* 너비 조정 */
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15); /* 그림자 추가 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    background-color: #ffffff; /* 배경 색상 추가 */
+    transition: transform 0.3s;
+}
+
+.calculator:hover {
+    transform: translateY(-5px); /* 마우스 오버 시 살짝 위로 이동 */
+}
+
+h1 {
+    text-align: center;
+    color: #6f42c1;
+    font-size: 2.2em; /* 폰트 크기 조정 */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* 텍스트 그림자 추가 */
+}
+
+input[type="file"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 14px; /* 패딩 증가 */
+    margin: 12px 0; /* 여백 증가 */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input[type="file"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    border: 1px solid #6f42c1;
+    box-shadow: 0 0 5px rgba(111, 66, 193, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 14px; /* 패딩 증가 */
+    background-color: #6f42c1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 12px 0; /* 여백 증가 */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #5a31a9;
+    transform: translateY(-2px);
+}
+
+.result-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #6f42c1;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e9ecef;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* 모바일에서는 세로로 배치 */
+        align-items: center; /* 가운데 정렬 */
+    }
+    
+    .calculator {
+        width: 90%; /* 모바일에서는 너비 조정 */
+        margin-bottom: 20px; /* 아래 여백 추가 */
+    }
+    
+    input[type="file"],
+    input[type="date"],
+    textarea,
+    button {
+        font-size: 14px; /* 폰트 크기 조정 */
+    }
+}
