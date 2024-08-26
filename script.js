@@ -21,7 +21,7 @@ function setupCalculator(buttonId, fileInputId, dateInputId, nicknameInputId, re
         const reader = new FileReader();
 
         reader.onload = function(event) {
-            const content = event.target.result; // event 객체의 target 사용
+            const content = event.target.result; // 여기서 event.target이 정의되지 않는 경우를 방지합니다.
             const lines = content.split('\n');
             const results = {};
 
@@ -43,7 +43,7 @@ function setupCalculator(buttonId, fileInputId, dateInputId, nicknameInputId, re
 
                 if (dateFound) {
                     const nicknameMatch = line.match(/\[(.*?)\]/g);
-                    if (nicknameMatch) {
+                    if (nicknameMatch && nicknameMatch.length >= 2) { 
                         const nickname = nicknameMatch[0].replace(/\[|\]/g, '');
                         const time = nicknameMatch[1].replace(/\[|\]/g, '');
 
